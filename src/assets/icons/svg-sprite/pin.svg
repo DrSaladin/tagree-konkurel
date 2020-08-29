@@ -1,0 +1,6 @@
+<svg>
+    <g fill="none" stroke="#ff7c0c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2px">
+        <path d="M19,10c0,7-9,13-9,13S1,17,1,10a9,9,0,0,1,18,0Z"/>
+        <circle cx="10" cy="10" r="3"/>
+    </g>
+</svg>

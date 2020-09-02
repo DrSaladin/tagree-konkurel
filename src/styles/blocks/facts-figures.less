@@ -1,0 +1,120 @@
+
+.facts-figures {
+  position: relative;
+}
+
+.facts-figures__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.facts-figures__list-item {
+  width: 465px;
+  height: 465px;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 33%;
+  padding: 100px;
+}
+
+.facts-figures__list-item--orange {
+  background-color: #FF7C0C;
+  background-image: url(../assets/images/bg-img-1.png);
+  box-shadow: 0px 32px 117px 0px rgba(255, 124, 12, 0.22);
+}
+
+.facts-figures__list-item--black {
+  background-color: #10100F;
+  background-image: url(../assets/images/bg-item-2.png);
+  box-shadow: 0px 32px 117px 0px rgba(16, 16, 15, 0.22);
+}
+
+.facts-figures__list-item--green {
+  background-color: #00B557;
+  background-image: url(../assets/images/bg-img-3.png);
+  box-shadow: 0px 32px 117px 0px rgba(0, 181, 87, 0.22);
+}
+
+
+.facts-figures__figures {
+  font-family: @sans-font;
+  font-size: 60px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 50px;
+}
+
+.facts-figures__title {
+  font-family: @sans-font;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+@media (max-width:1560px) {
+  .facts-figures__list-item {
+    width: 350px;
+    height: 350px;
+    padding: 50px;
+  }
+
+  .facts-figures__list-item--orange,
+  .facts-figures__list-item--black, 
+  .facts-figures__list-item--green {
+      background-image: none;
+  }
+
+  .facts-figures__figures {
+      margin-top: 40px;
+  }
+}
+
+@media (max-width:1140px) {
+    .facts-figures__figures {
+        font-size: 40px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .facts-figures__title {
+        font-size: 24px;
+    }
+
+  .facts-figures__list-item {
+    width: 220px;
+    height: 220px;
+    padding: 25px;
+  }
+
+  .facts-figures__list-item--orange {
+      background-color: #FF7C0C;
+      background-image: url(../assets/images/bg-img-1.png);
+  }
+
+  .facts-figures__list-item--black {
+      background-color: #10100F;
+      background-image: url(../assets/images/bg-item-2.png);
+  }
+
+  .facts-figures__list-item--green {
+      background-color: #00B557;
+      background-image: url(../assets/images/bg-img-3.png);
+  }
+}
+
+@media (max-width:768px) {
+  .facts-figures__list-item {
+    min-width: 200px;
+    min-height: 200px;
+    padding: 25px;
+    margin-right: 10px;
+  }
+
+  .facts-figures__list-item:last-of-type {
+    margin-right: 0;
+  }
+}

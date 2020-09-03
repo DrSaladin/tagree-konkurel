@@ -1,6 +1,12 @@
 (function () {
   'use strict';
 
+  jQuery(document).ready(function ($) {
+    $('#lightSlider').lightSlider({
+      slideMove: 1,
+    });
+  });
+
   if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPad/i))) {
       document
           .querySelector('html')

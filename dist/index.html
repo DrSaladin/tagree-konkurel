@@ -8,7 +8,7 @@
   <title>Site</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900&subset=latin,cyrillic" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="styles/styles.min.css?ver=0">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"/>
 
   <meta name="keywords" content="Site">
   <meta property="og:title" content="Site" />
@@ -33,7 +33,7 @@
 
 <body class="body">
 
-  <header class="page-header">
+  <header class="page-header page-header--margin-bottom">
     <div class="page-header__wrapper container">
         <nav class="page-header__nav page-nav page-nav--closed">
             <div class="page-nav__wrapper">
@@ -100,7 +100,7 @@
     </div>
 </header>
   <main class="main">
-  <div class="page-slider wrap"> <!--Убарть врэпер-->
+  <div class="page-slider">
     <div class="page-slider__slider-list" id="js-sliderList">
         <div class="page-slider__slider-list-item page-slider__slider-list-item--first" id="js-sliderCircle">
             <a class="page-slider__slide-section-link" href="">
@@ -167,7 +167,7 @@
     </div>
 </div>
 
-  <div class="goods-overview">
+  <div class="goods-overview goods-overview--positioning">
     <div class="goods-overview__wrapper">
         <ul class="goods-overview__list">
             <li class="goods-overview__list-item">
@@ -239,7 +239,7 @@
     </div>
 </div>
 
-  <div class="partners-list">
+  <div class="partners-list partners-list--positioning">
     <div class="container">
         <ul class="partners-list__slider-list">
             <li class="partners-list__slider-list-item">
@@ -298,7 +298,7 @@
         </ul>
     </div>
 </div>
-  <section class="news">
+  <section class="news news--positioning">
   <div class="container">
     <div class="news__title-block">
       <h2 class="news__section-title">
@@ -392,7 +392,7 @@
   <div class="facts-figures">
   <div class="container">
     <div class="facts-figures__wrapper">
-      <ul class="facts-figures__list">
+      <ul class="facts-figures__list" id="lightSlider">
         <li class="facts-figures__list-item facts-figures__list-item--orange">
           <p class="facts-figures__figures">
             15
@@ -566,21 +566,21 @@
             </nav>
             <address class="page-footer__address">
                 <div class="page-footer__address-mail">
-                    <svg class="page-footer__address-mail-svg" width="24" height="20">
-                        <use xlink:href="assets/icons/symbols.svg#mail"></use>
+                    <svg role="img" class="page-footer__address-mail-svg" width="24" height="20">
+                        <use xlink:href="../assets/icons/symbols.svg#mail"></use>
                     </svg>
                     <a href="mailto:info@konkurel.ru">info@konkurel.ru</a>
                 </div>
                 <div class="page-footer__address-tel">
-                    <svg width="24" height="24" class="page-footer__address-tel-svg">
-                        <use xlink:href="assets/icons/symbols.svg#smartphone"></use>
+                    <svg role="img" width="24" height="24" class="page-footer__address-tel-svg">
+                        <use xlink:href="../assets/icons/symbols.svg#smartphone"></use>
                     </svg>
                     <a href="telto:+78124413638">+7 (812) 441 36 38</a>
                     <a href="telto:+78127559329">+7 (812) 755 93 29</a>
                 </div>
                 <div class="page-footer__address-tax">
-                    <svg width="20" height="24" class="page-footer__address-tax-svg">
-                        <use xlink:href="assets/icons/symbols.svg#pin"></use>
+                    <svg role="img" width="20" height="24" class="page-footer__address-tax-svg">
+                        <use xlink:href="../assets/icons/symbols.svg#pin"></use>
                     </svg>
                     <p class="page-footer__address-tax-info">
                         197342, г.Санкт-Петербург, Белоостровская, д. 28, офис 428
@@ -592,8 +592,8 @@
 
         <div class="page-footer__disclaimer">
             <a class="page-footer__disclaimer-logo" href="">
-                <svg class="page-footer__disclaimer-svg" width="159" height="35">
-                    <use xlink:href="assets/icons/symbols.svg#footer__logo"></use>
+                <svg role="img" class="page-footer__disclaimer-svg" width="159" height="35">
+                    <use xlink:href="../assets/icons/symbols.svg#footer__logo"></use>
                 </svg>
             </a>
             <small class="page-footer__disclaimer-copyright">
@@ -602,8 +602,8 @@
             <small class="page-footer__disclaimer-developers">
                 <a class="page-footer__disclaimer-developers-link" href="">
                     <span>Сделано в</span>
-                    <svg width="88" height="22" class="page-footer__disclaimer-svg">
-                        <use xlink:href="assets/icons/symbols.svg#tagree"></use>
+                    <svg role="img" width="88" height="22" class="page-footer__disclaimer-svg">
+                        <use xlink:href="../assets/icons/symbols.svg#tagree" />
                     </svg>
                 </a>
             </small>
@@ -614,8 +614,9 @@
 </footer>
   
   <script src="scripts/jquery-3.4.1.min.js"></script>
-  <script src="scripts/slick.js"></script>
-  <script src="scripts/main.min.js"></script>
+  <script src="scripts/slick.min.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/lightSlider.js"></script>
 </body>
 
 </html>

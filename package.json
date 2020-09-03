@@ -23,5 +23,8 @@
   "scripts": {
     "build": "gulp build",
     "start": "npm run build && gulp serve"
+  },
+  "dependencies": {
+    "posthtml-include": "^1.4.3"
   }
 }

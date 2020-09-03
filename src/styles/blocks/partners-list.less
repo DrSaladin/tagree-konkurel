@@ -1,8 +1,26 @@
-.partners-list__slider-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.partners-list {
+    width: 1140px;
+    margin: 0 auto;
+
+    &--positioning {
+        margin: 0 auto 110px auto;
+    }
+
+    &__slider-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
+
+
+@media @bw400 {
+    .partners-list--positioning {
+        margin: 0 auto 35px auto;
+    }
+}
+
+

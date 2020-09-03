@@ -1,6 +1,5 @@
 .page-footer {
    position: relative;
-   //background: linear-gradient(to right, #FF7C0C 26%, #10100F 26%);
    background-color: #10100F;
    padding: 120px 0 80px 0;
 
@@ -42,240 +41,249 @@
    &__wrapper {
        margin-bottom: 85px;
    }
+
+   &__list-title {
+       font-family: @sans-font;
+       font-size: 14px;
+       font-weight: bold;
+       color: #ffffff;
+       margin-bottom: 25px;
+       margin-top: 0;
+       text-transform: uppercase;
+   }
+
+   &__address svg {
+       margin-bottom: 10px;
+   }
+
+   &__about-company {
+       width: 33%;
+       position: relative;
+       z-index: 2;
+
+       & a {
+           font-family: @sans-font;
+           font-size: 15px;
+           color: #000000;
+           margin-bottom: 25px;
+           display: block;
+       }
+   }
+
+   &__disclaimer {
+       display: flex;
+       position: relative;
+       z-index: 2;
+       align-items: center;
+       justify-content: space-between;
+   }
+
+   &__disclaimer-developers-link {
+       align-items: center;
+       display: flex;
+       font-family: @sans-font;
+   }
+
+   &__disclaimer-copyright {
+       color: #959595;
+       font-family: @sans-font;
+   }
+
+   &__disclaimer-developers span {
+       margin-right: 10px;
+       color: #959595;
+   }
+
+   &__disclaimer-svg {
+       color: #ffffff;
+   }
+
+
+
+   &__catalog {
+       width: 36%;
+       z-index: 1;
+
+       & a {
+           font-family: @sans-font;
+           font-size: 15px;
+           color: #959595;
+           margin-bottom: 25px;
+           display: block;
+       }
+   }
+
+   &__producers {
+       width: 23%;
+       z-index: 1;
+
+       & a {
+           font-family: @sans-font;
+           font-size: 15px;
+           color: #959595;
+           margin-bottom: 25px;
+           display: block;
+       }
+   }
+
+   &__address {
+       width: 23%;
+       text-align: right;
+
+       & a {
+           color: #ffffff;
+           font-style: normal;
+           display: block;
+           font-family: @sans-font;
+       }
+
+       & p {
+           font-style: normal;
+           margin-left: auto;
+           width: 215px;
+           color: #ffffff;
+           font-family: @sans-font;
+       }
+   }
+
+   &__wrapper {
+       display: flex;
+   }
+
+   &__nav {
+       color: #ffffff;
+       display: flex;
+       justify-content: space-between;
+       width: 78%;
+   }
+
+
+   &__address-more {
+       border: 2px solid #FF7C0C;
+       border-radius: 3px;
+       width: 204px;
+       height: 56px;
+       text-align: center;
+       padding: 5px 10px;
+       background-color: transparent;
+       font-family: @sans-font;
+       font-size: 15px;
+       color: #ffffff;
+       font-weight: bolder;
+   }
+
+   &__address-mail,
+   &__address-tel {
+       margin-bottom: 40px;
+   }
+
+   &__address-tax-info {
+       margin-top: 0;
+       margin-bottom: 55px;
+   }
+
+   &__list-title--color-orange {
+       color: #FF7C0C;
+   }
 }
 
 
-.page-footer__list-title {
-    font-family: @sans-font;
-    font-size: 14px;
-    font-weight: bold;
-    color: #ffffff;
-    margin-bottom: 25px;
-    margin-top: 0;
-    text-transform: uppercase;
-}
-
-.page-footer__address svg {
-    margin-bottom: 10px;
-}
-
-.page-footer__about-company {
-    width: 33%;
-    position: relative;
-    z-index: 2;
-
-    & a {
-        font-family: @sans-font;
-        font-size: 15px;
-        color: #000000;
-        margin-bottom: 25px;
-        display: block;
-    }
-}
-
-.page-footer__disclaimer {
-    display: flex;
-    position: relative;
-    z-index: 2;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.page-footer__disclaimer-developers-link {
-    align-items: center;
-    display: flex;
-}
-
-.page-footer__disclaimer-copyright {
-    color: #959595;
-}
-
-.page-footer__disclaimer-developers span {
-    margin-right: 10px;
-    color: #959595;
-}
-
-.page-footer__disclaimer-svg {
-    color: #ffffff;
-}
-
-
-
-.page-footer__catalog {
-    width: 36%;
-    z-index: 1;
-
-    & a {
-        font-family: @sans-font;
-        font-size: 15px;
-        color: #959595;
-        margin-bottom: 25px;
-        display: block;
-    }
-}
-
-.page-footer__producers {   
-    width: 23%;
-    z-index: 1;
-
-    & a {
-        font-family: @sans-font;
-        font-size: 15px;
-        color: #959595;
-        margin-bottom: 25px;
-        display: block;
-    }
-}
-
-.page-footer__address {
-    width: 23%;
-    text-align: right;
-
-    & a {
-        color: #ffffff;
-        font-style: normal;
-        display: block;
-    }
-
-    & p {
-        font-style: normal;
-        margin-left: auto;
-        width: 215px;
-        color: #ffffff;
-    }
-}
-
-.page-footer__wrapper {
-    display: flex;
-}
-
-.page-footer__nav {
-    color: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    width: 78%;
-}
-
-
-.page-footer__address-more {
-    border: 2px solid #FF7C0C;
-    border-radius: 3px;
-    width: 204px;
-    height: 56px;
-    text-align: center;
-    padding: 5px 10px;
-    background-color: transparent;
-    font-family: @sans-font;
-    font-size: 15px;
-    color: #ffffff;
-    font-weight: bolder;
-}
-
-.page-footer__address-mail,
-.page-footer__address-tel {
-    margin-bottom: 40px;
-}
-
-.page-footer__address-tax-info {
-    margin-top: 0;
-    margin-bottom: 55px;
-}
-
-.page-footer__list-title--color-orange {
-    color: #FF7C0C;
-}
-
-@media (max-width:1140px) {
+@media @bw1140 {
     .page-footer__address p {
         width: auto;
     }
 }
 
 
-@media (max-width:768px) {
-    .page-footer__list-item {
-        display: none;
-    }
-
-    .page-footer__disclaimer {
-        flex-direction: column;
-        position: absolute;
-        bottom: 100px;
-        min-height: 135px;
-    }
-
-    .page-footer__disclaimer-logo {
-        order: 1;
-    }
-
-    .page-footer__disclaimer-developers {
-        order: 2;
-    }
-
-    .page-footer__disclaimer-copyright {
-        order: 3;
-    }
-
-    .page-footer__wrapper {
-        flex-wrap: wrap;
-        margin-bottom: 0;
-    }
-
+@media @bw768 {
     .page-footer {
-        padding-top: 30px;
 
-        &::before {
+        &__list-item {
             display: none;
         }
 
-        &::after {
-            left: 0;
+        &__disclaimer {
+            flex-direction: column;
+            position: absolute;
+            bottom: 100px;
+            min-height: 135px;
         }
 
-        &__list-title {
-            color: #FF7C0C;
-            margin-bottom: 35px;
+        &__disclaimer-logo {
+            order: 1;
         }
-    }
 
-    .page-footer__nav {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
+        &__disclaimer-developers {
+            order: 2;
+        }
 
-    .page-footer__address {
-        width: 50%;
-        z-index: 1;
-        min-width: 170px;
-    }
+        &__disclaimer-copyright {
+            order: 3;
+        }
 
-    .page-footer__nav {
-        width: 50%;
-        min-width: 170px;
+        &__wrapper {
+            flex-wrap: wrap;
+            margin-bottom: 0;
+        }
+
+        & {
+            padding-top: 30px;
+
+            &::before {
+                display: none;
+            }
+
+            &::after {
+                left: 0;
+            }
+
+            &__list-title {
+                color: #FF7C0C;
+                margin-bottom: 35px;
+            }
+        }
+
+        &__nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        &__address {
+            width: 50%;
+            z-index: 1;
+            min-width: 170px;
+        }
+
+        &__nav {
+            width: 50%;
+            min-width: 170px;
+        }
     }
 }
 
-@media (max-width:390px) {
-    .page-footer__address {
-        text-align: left;
+@media @bw400 {
+    .page-footer {
+
+        &__address {
+            text-align: left;
+        }
+
+        &__wrapper {
+            margin-bottom: 150px;
+
+        }
+
+        &__disclaimer {
+            bottom: 50px;
+        }
+
+        &__about-company {
+            width: auto;
+        }
+
+        &__nav {
+            width: 100%;
+        }
     }
-
-    .page-footer__wrapper {
-        margin-bottom: 150px;
-
-    }
-
-    .page-footer__disclaimer {
-        bottom: 50px;
-    }
-
-    .page-footer__about-company {
-        width: auto;
-    }
-
-    .page-footer__nav {
-        width: 100%;
-    }
-
 }

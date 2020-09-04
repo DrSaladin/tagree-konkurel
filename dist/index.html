@@ -298,7 +298,7 @@
         </ul>
     </div>
 </div>
-  <section class="news news--positioning">
+  <section class="news news--positioning js-appear">
   <div class="container">
     <div class="news__title-block">
       <h2 class="news__section-title">
@@ -392,9 +392,9 @@
   <div class="facts-figures">
   <div class="container">
     <div class="facts-figures__wrapper">
-      <ul class="facts-figures__list" id="lightSlider">
+      <ul class="facts-figures__list">
         <li class="facts-figures__list-item facts-figures__list-item--orange">
-          <p class="facts-figures__figures">
+          <p class="facts-figures__figures countid-element js-counter" data-start='0' data-end='15' data-speed='3'>
             15
           </p>
           <p class="facts-figures__title">
@@ -402,16 +402,19 @@
           </p>
         </li>
         <li class="facts-figures__list-item facts-figures__list-item--black">
-          <p class="facts-figures__figures">
-            10 000 +
+          <p class="facts-figures__figures facts-figures__figures--added-plus countid-element js-counter" data-start='0'
+            data-end='10000'
+            data-speed='2000'>
+            10000
           </p>
           <p class="facts-figures__title">
             Контрактов
           </p>
         </li>
         <li class="facts-figures__list-item facts-figures__list-item--green">
-          <p class="facts-figures__figures">
-            6 000 +
+          <p class="facts-figures__figures facts-figures__figures--added-plus countid-element js-counter" data-start='0'
+            data-end='6000' data-speed='1000'>
+            6000
           </p>
           <p class="facts-figures__title">
             Компанентов в каталоге
@@ -421,7 +424,7 @@
     </div>
   </div>
 </div>
-  <section class="about-us">
+  <section class="about-us about-us--positioning" id="js-aboutFactsWrapper">
   <div class="container">
     <h2 class="about-us__title">
       О компании
@@ -456,7 +459,9 @@
         <div class="page-footer__wrapper">
         <nav class="page-footer__nav">
                 <div class="page-footer__about-company">
-                    <h3 class="page-footer__list-title">О компании</h3>
+                    <button class="page-footer__list-title-button">
+                        <h3 class="page-footer__list-title">О компании</h3>
+                    </button>
                     <ul class="page-footer__list">
                         <li class="page-footer__list-item">
                             <a href="#">О нас</a>
@@ -472,7 +477,9 @@
                         </li>
                     </ul>
 
-                    <h3 class="page-footer__list-title">Полезная информация</h3>
+                    <button class="page-footer__list-title-button">
+                        <h3 class="page-footer__list-title">Полезная информация</h3>
+                    </button>
                     <ul class="page-footer__list">
                         <li class="page-footer__list-item">
                             <a href="#">Новости</a>
@@ -493,7 +500,9 @@
                 </div>
 
                 <div class="page-footer__catalog">
-                    <h3 class="page-footer__list-title page-footer__list-title--color-orange">Каталог</h3>
+                    <button class="page-footer__list-title-button">
+                        <h3 class="page-footer__list-title page-footer__list-title--color-orange">Каталог</h3>
+                    </button>
                     <ul class="page-footer__list">
                         <li class="page-footer__list-item">
                             <a href="#">Электромеханические реле</a>
@@ -529,7 +538,9 @@
                 </div>
 
                 <div class="page-footer__producers">
-                    <h3 class="page-footer__list-title page-footer__list-title--color-orange">Производители</h3>
+                    <button class="page-footer__list-title-button">
+                        <h3 class="page-footer__list-title page-footer__list-title--color-orange">Производители</h3>
+                    </button>
                     <ul class="page-footer__list">
                         <li class="page-footer__list-item">
                             <a href="#">Attend</a>
@@ -567,20 +578,20 @@
             <address class="page-footer__address">
                 <div class="page-footer__address-mail">
                     <svg role="img" class="page-footer__address-mail-svg" width="24" height="20">
-                        <use xlink:href="../assets/icons/symbols.svg#mail"></use>
+                        <use xlink:href="assets/icons/symbols.svg#mail"></use>
                     </svg>
                     <a href="mailto:info@konkurel.ru">info@konkurel.ru</a>
                 </div>
                 <div class="page-footer__address-tel">
                     <svg role="img" width="24" height="24" class="page-footer__address-tel-svg">
-                        <use xlink:href="../assets/icons/symbols.svg#smartphone"></use>
+                        <use xlink:href="assets/icons/symbols.svg#smartphone"></use>
                     </svg>
                     <a href="telto:+78124413638">+7 (812) 441 36 38</a>
                     <a href="telto:+78127559329">+7 (812) 755 93 29</a>
                 </div>
                 <div class="page-footer__address-tax">
                     <svg role="img" width="20" height="24" class="page-footer__address-tax-svg">
-                        <use xlink:href="../assets/icons/symbols.svg#pin"></use>
+                        <use xlink:href="assets/icons/symbols.svg#pin"></use>
                     </svg>
                     <p class="page-footer__address-tax-info">
                         197342, г.Санкт-Петербург, Белоостровская, д. 28, офис 428
@@ -593,7 +604,7 @@
         <div class="page-footer__disclaimer">
             <a class="page-footer__disclaimer-logo" href="">
                 <svg role="img" class="page-footer__disclaimer-svg" width="159" height="35">
-                    <use xlink:href="../assets/icons/symbols.svg#footer__logo"></use>
+                    <use xlink:href="assets/icons/symbols.svg#footer__logo"></use>
                 </svg>
             </a>
             <small class="page-footer__disclaimer-copyright">
@@ -603,7 +614,7 @@
                 <a class="page-footer__disclaimer-developers-link" href="">
                     <span>Сделано в</span>
                     <svg role="img" width="88" height="22" class="page-footer__disclaimer-svg">
-                        <use xlink:href="../assets/icons/symbols.svg#tagree" />
+                        <use href="assets/icons/symbols.svg#tagree"></use>
                     </svg>
                 </a>
             </small>
@@ -616,7 +627,16 @@
   <script src="scripts/jquery-3.4.1.min.js"></script>
   <script src="scripts/slick.min.js"></script>
   <script src="scripts/main.js"></script>
-  <script src="scripts/lightSlider.js"></script>
+  <script src="scripts/svg4everybody.js"></script>
+  <script>
+     // run it now or whenever you are ready
+    svg4everybody();
+  </script>
+  <script src="scripts/countid.js"></script>
+  <script src="scripts/appear-init.js"></script>
+  <script src="scripts/jquery.appear.js"></script>
+
+  <object class="icon visually-hidden" data="assets/icons/symbols.svg" type="image/svg+xml"></object>
 </body>
 
 </html>

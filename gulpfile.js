@@ -5,7 +5,7 @@ var del = require('del');
 var includer = require("gulp-x-includer");
 
 //var posthtml = require("gulp-posthtml");
-//var posthtmlInclude = require("posthtml-include");
+//var include = require("posthtml-include");
 
 var less = require('gulp-less');
 var plumber = require('gulp-plumber');
@@ -43,11 +43,12 @@ gulp.task('copy', function() {
   .pipe(gulp.dest('dist/'));
 });
 
-/* gulp.task('html', function () {
-  return gulp.src('src/*.html')
-  .pipe(posthtml ([
-    posthtmlInclude()
-  ]))
+/* gulp.task("html", function () {
+  return gulp.src("source/*.html")
+    .pipe(posthtml([
+      include()
+    ]))
+    .pipe(gulp.dest("build"));
 }); */
 
 gulp.task('include-html', function () {

@@ -1,9 +1,12 @@
 
 .about-us {
-  margin-top: -230px;
-  padding-top: 370px;
-  padding-bottom: 200px;
   position: relative;
+
+  &--positioning {
+      margin-top: -230px;
+      padding-top: 370px;
+      padding-bottom: 200px;
+  }
 
   &::after {
       content: "";
@@ -92,12 +95,17 @@
       text-decoration: none;
       text-align: center;
       line-height: 40px;
+
+      &:hover {
+          color: #ffffff;
+          background-color: #FF7C0C;
+      }
   }
 
 }
 
 @media @bw1560 {
-    .about-us {
+    .about-us--positioning {
         margin-top: -175px;
         padding-top: 270px;
     }
@@ -120,7 +128,10 @@
 
 @media @bw768 {
     .about-us {
-        padding-bottom: 30px;
+
+        &--positioning {
+            padding-bottom: 30px;
+        }
 
         &__wrapper {
             min-height: 400px;

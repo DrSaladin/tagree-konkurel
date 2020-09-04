@@ -47,9 +47,24 @@
        font-size: 14px;
        font-weight: bold;
        color: #ffffff;
-       margin-bottom: 25px;
+       margin-bottom: 0;
        margin-top: 0;
        text-transform: uppercase;
+   }
+
+   &__list-title-button {
+       background-color: transparent;
+       border: none;
+       padding: 0;
+       margin-bottom: 25px;
+       cursor: default;
+   }
+   
+   &__list-item {
+
+    & a:hover {
+        opacity: 0.7;
+    }
    }
 
    &__address svg {
@@ -76,6 +91,10 @@
        z-index: 2;
        align-items: center;
        justify-content: space-between;
+
+       & svg:hover {
+           opacity: 0.7;
+       }
    }
 
    &__disclaimer-developers-link {
@@ -135,6 +154,10 @@
            font-style: normal;
            display: block;
            font-family: @sans-font;
+
+           &:hover {
+               opacity: 0.7;
+           }
        }
 
        & p {
@@ -170,6 +193,11 @@
        font-size: 15px;
        color: #ffffff;
        font-weight: bolder;
+
+       &:hover {
+           background-color: #FF7C0C;
+           color: #000000;
+       }
    }
 
    &__address-mail,
@@ -189,14 +217,21 @@
 
 
 @media @bw1140 {
-    .page-footer__address p {
-        width: auto;
+    .page-footer {
+        &__address p {
+            width: auto;
+        }
+
+        &__about-company {
+            width: 100%;
+        }
     }
 }
 
 
 @media @bw768 {
     .page-footer {
+        padding-top: 30px;
 
         &__list-item {
             display: none;
@@ -226,20 +261,26 @@
             margin-bottom: 0;
         }
 
-        & {
-            padding-top: 30px;
 
-            &::before {
-                display: none;
-            }
+        &::before {
+            display: none;
+        }
 
-            &::after {
-                left: 0;
-            }
+        &::after {
+            left: 0;
+        }
 
-            &__list-title {
-                color: #FF7C0C;
-                margin-bottom: 35px;
+        &__list-title {
+            color: #FF7C0C;
+        }
+
+        &__list-title-button {
+            margin-bottom: 35px;
+            cursor: pointer;
+            text-align: left;
+
+            &:hover {
+                opacity: 0.7;
             }
         }
 

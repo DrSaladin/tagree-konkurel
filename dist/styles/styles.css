@@ -471,6 +471,9 @@ button {
   text-decoration: none;
   display: block;
 }
+.page-header__user-block-contacts a:hover {
+  opacity: 0.7;
+}
 .page-header__user-block-contacts a:first-of-type {
   margin-bottom: 5px;
 }
@@ -495,6 +498,10 @@ button {
   position: absolute;
   right: 30px;
   top: 10px;
+  color: #ffffff;
+}
+.page-header__user-block-cart:hover {
+  color: #000000;
 }
 .page-header__user-block-cart-indicator {
   position: absolute;
@@ -561,9 +568,19 @@ button {
   font-size: 14px;
   font-weight: bold;
   color: #ffffff;
-  margin-bottom: 25px;
+  margin-bottom: 0;
   margin-top: 0;
   text-transform: uppercase;
+}
+.page-footer__list-title-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin-bottom: 25px;
+  cursor: default;
+}
+.page-footer__list-item a:hover {
+  opacity: 0.7;
 }
 .page-footer__address svg {
   margin-bottom: 10px;
@@ -592,6 +609,9 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.page-footer__disclaimer svg:hover {
+  opacity: 0.7;
 }
 .page-footer__disclaimer-developers-link {
   -webkit-box-align: center;
@@ -645,6 +665,9 @@ button {
   display: block;
   font-family: 'Source Sans Pro', Arial, sans-serif;
 }
+.page-footer__address a:hover {
+  opacity: 0.7;
+}
 .page-footer__address p {
   font-style: normal;
   margin-left: auto;
@@ -679,6 +702,10 @@ button {
   font-size: 15px;
   color: #ffffff;
   font-weight: bolder;
+}
+.page-footer__address-more:hover {
+  background-color: #FF7C0C;
+  color: #000000;
 }
 .page-footer__address-mail,
 .page-footer__address-tel {
@@ -746,7 +773,7 @@ button {
   font-size: 14px;
   border: none;
   background-color: transparent;
-  width: 180px;
+  width: 185px;
 }
 .page-nav__list-item {
   margin-right: 60px;
@@ -824,6 +851,9 @@ button {
           box-sizing: border-box;
   margin-bottom: 40px;
 }
+.page-slider__slide-section-link:hover {
+  color: #000000;
+}
 .page-slider__slide-title {
   font-family: 'Source Sans Pro', Arial, sans-serif;
   color: #ffffff;
@@ -853,6 +883,10 @@ button {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 10px;
+}
+.page-slider__slide-more-button:hover {
+  background-color: #FF7C0C;
+  color: #000000;
 }
 .page-slider__slider-list-item {
   position: relative;
@@ -1002,6 +1036,9 @@ button {
       -ms-flex-align: center;
           align-items: center;
 }
+.partners-list__slider-list-item {
+  opacity: 0.6;
+}
 .news {
   position: relative;
 }
@@ -1030,7 +1067,7 @@ button {
   text-decoration: none;
   font-family: 'Source Sans Pro', Arial, sans-serif;
   font-size: 18px;
-  color: #000000;
+  color: #ffffff;
   font-weight: 800;
   display: block;
   background-color: #FF7C0C;
@@ -1042,6 +1079,9 @@ button {
           box-sizing: border-box;
   text-align: center;
   line-height: 30px;
+}
+.news__more-news-link:hover {
+  color: #000000;
 }
 .news__wrapper {
   display: -webkit-box;
@@ -1194,6 +1234,18 @@ button {
   font-weight: bold;
   color: #ffffff;
   margin-bottom: 50px;
+  position: relative;
+}
+.facts-figures__figures--added-plus::after {
+  position: absolute;
+  content: " +";
+  width: 30px;
+  height: 30px;
+  font-size: 60px;
+  font-weight: bold;
+  color: #ffffff;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  margin-left: 10px;
 }
 .facts-figures__title {
   font-family: 'Source Sans Pro', Arial, sans-serif;
@@ -1202,10 +1254,12 @@ button {
   color: #ffffff;
 }
 .about-us {
+  position: relative;
+}
+.about-us--positioning {
   margin-top: -230px;
   padding-top: 370px;
   padding-bottom: 200px;
-  position: relative;
 }
 .about-us::after {
   content: "";
@@ -1216,7 +1270,7 @@ button {
   width: 100%;
   height: 100%;
   opacity: 0.1;
-  background-image: url(../assets/images/about-us__bg.jpg);
+  background-image: url(assets/images/about-us__bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
@@ -1292,6 +1346,10 @@ button {
   text-decoration: none;
   text-align: center;
   line-height: 40px;
+}
+.about-us__more-button:hover {
+  color: #ffffff;
+  background-color: #FF7C0C;
 }
 .slick-dots {
   position: absolute;
@@ -1684,7 +1742,7 @@ button {
   .facts-figures__figures {
     margin-top: 40px;
   }
-  .about-us {
+  .about-us--positioning {
     margin-top: -175px;
     padding-top: 270px;
   }
@@ -1701,6 +1759,9 @@ button {
 @media (max-width: 1139px) {
   .page-footer__address p {
     width: auto;
+  }
+  .page-footer__about-company {
+    width: 100%;
   }
   .page-slider__slider-list-item--first,
   .page-slider__slider-list-item--second,
@@ -1741,6 +1802,9 @@ button {
     font-size: 40px;
     margin-top: 30px;
     margin-bottom: 30px;
+  }
+  .facts-figures__figures--added-plus::after {
+    font-size: 40px;
   }
   .facts-figures__title {
     font-size: 24px;
@@ -1840,7 +1904,14 @@ button {
   }
   .page-footer__list-title {
     color: #FF7C0C;
+  }
+  .page-footer__list-title-button {
     margin-bottom: 35px;
+    cursor: pointer;
+    text-align: left;
+  }
+  .page-footer__list-title-button:hover {
+    opacity: 0.7;
   }
   .page-footer__nav {
     display: -webkit-box;
@@ -2015,7 +2086,7 @@ button {
   .facts-figures__list-item:last-of-type {
     margin-right: 0;
   }
-  .about-us {
+  .about-us--positioning {
     padding-bottom: 30px;
   }
   .about-us__wrapper {

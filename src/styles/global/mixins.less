@@ -9,7 +9,7 @@
 .container {
   box-sizing: border-box;
   width: 100%;
-  max-width: @bw1680;
+  max-width: 1680px;
   margin: 0 auto;
   padding-left: 50px;
   padding-right: 50px;
@@ -63,3 +63,7 @@
   margin: 0;
 }
 
+main {
+  overflow: hidden;
+  /* Чтобы избежать ломки при переходе по ссылкам в partners-list и goods-overview с табом */
+}

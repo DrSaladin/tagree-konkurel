@@ -33,51 +33,51 @@
 
 <body class="body">
 
-  <header class="page-header page-header--margin-bottom">
+  <header class="page-header">
     <div class="page-header__wrapper container">
-        <nav class="page-header__nav page-nav page-nav--closed">
-            <div class="page-nav__wrapper">
-                <a class="page-nav__logo-link" href="index.html">
-                    <picture>
-                        <img class="page-nav__logo-img" src="assets/images/logo.png" alt="Компания Конкур" width="207" height="41">
-                    </picture>
+        <nav class="page-header__nav page-nav page-nav--closed" id="js-nav">
+    <div class="page-nav__wrapper">
+        <a class="page-nav__logo-link" href="index.html">
+            <picture>
+                <img class="page-nav__logo-img" src="assets/images/logo.png" alt="Компания Конкур" width="207" height="41">
+            </picture>
+        </a>
+        <button class="page-nav__hamburger" id="js-navBurger" type="button">
+            <span class="visually-hidden">Управление мобильным меню</span>
+        </button>
+        <ul class="page-nav__list">
+            <li class="js-navItem page-nav__list-item page-nav__list-item--submenu-mark">
+                <a href="">
+                    Каталог
                 </a>
-                <button class="page-nav__hamburger" type="button">
-                    <span class="visually-hidden">Управлением мобильным меню</span>
-                </button>
-                <ul class="page-nav__list">
-                    <li class="page-nav__list-item page-nav__list-item--submenu-mark">
-                        <a href="">
-                            Каталог
-                        </a>
-                    </li>
-                    <li class="page-nav__list-item page-nav__list-item--submenu-mark">
-                        <a href="">
-                            Производители
-                        </a>
-                    </li>
-                    <li class="page-nav__list-item">
-                        <a href="">
-                            О компании
-                        </a>
-                    </li>
-                    <li class="page-nav__list-item page-nav__list-item--submenu-mark">
-                        <a href="">
-                            Прочее
-                        </a>
-                    </li>
-                </ul>
-                <form class="page-nav__search-form" action="index.html" method="GET">
-                    <label class="page-nav__search-label" for="page-search">
-                        <svg width="23" height="23">
-                            <use xlink:href="assets/icons/symbols.svg#search"></use>
-                        </svg>
-                    </label>
-                    <input class="page-nav__search-input page-nav__search-input--hidden" type="search" id="page-search" name="page-search" placeholder="Поиск по базе компонентов">
-                    <button class="page-nav__search-submit visually-hidden" type="submit">Поиск по сайту</button>
-                </form>
-            </div>
-        </nav>
+            </li>
+            <li class="js-navItem page-nav__list-item page-nav__list-item--submenu-mark">
+                <a href="">
+                    Производители
+                </a>
+            </li>
+            <li class="js-navItem page-nav__list-item">
+                <a href="">
+                    О компании
+                </a>
+            </li>
+            <li class="js-navItem page-nav__list-item page-nav__list-item--submenu-mark">
+                <a href="">
+                    Прочее
+                </a>
+            </li>
+        </ul>
+        <form class="page-nav__search-form" action="index.html" method="GET">
+            <label class="page-nav__search-label" for="page-search">
+                <svg role="img" width="23" height="23">
+                    <use xlink:href="assets/icons/symbols.svg#search"></use>
+                </svg>
+            </label>
+            <input class="page-nav__search-input page-nav__search-input--hidden" type="search" id="page-search" name="page-search" placeholder="Поиск по базе компонентов">
+            <button class="page-nav__search-submit visually-hidden" type="submit">Поиск по сайту</button>
+        </form>
+    </div>
+</nav>
         <div class="page-header__user-block">
             <div class="page-header__user-block-contacts">
                 <a href="tel:+78124413638">
@@ -96,7 +96,7 @@
                     77
                 </span>
             </button>
-        </div>
+        </div> 
     </div>
 </header>
 
@@ -107,124 +107,124 @@
   <footer class="page-footer">
     <div class="container">
         <div class="page-footer__wrapper">
-        <nav class="page-footer__nav">
-                <div class="page-footer__about-company">
-                    <button class="page-footer__list-title-button">
-                        <h3 class="page-footer__list-title">О компании</h3>
-                    </button>
-                    <ul class="page-footer__list">
-                        <li class="page-footer__list-item">
-                            <a href="#">О нас</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Вакансии</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Сертификаты</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Контакты</a>
-                        </li>
-                    </ul>
+            <nav class="page-footer__nav">
+                    <div class="page-footer__about-company">
+                        <a class="page-footer__list-title-button">
+                            <h3 class="page-footer__list-title">О компании</h3>
+                        </a>
+                        <ul class="page-footer__list">
+                            <li class="page-footer__list-item">
+                                <a href="#">О нас</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Вакансии</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Сертификаты</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Контакты</a>
+                            </li>
+                        </ul>
 
-                    <button class="page-footer__list-title-button">
-                        <h3 class="page-footer__list-title">Полезная информация</h3>
-                    </button>
-                    <ul class="page-footer__list">
-                        <li class="page-footer__list-item">
-                            <a href="#">Новости</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Публикации</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Прайсы</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Документации</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Вопрос-ответ</a>
-                        </li>
-                    </ul>
-                </div>
+                        <a class="page-footer__list-title-button">
+                            <h3 class="page-footer__list-title">Полезная информация</h3>
+                        </a>
+                        <ul class="page-footer__list">
+                            <li class="page-footer__list-item">
+                                <a href="#">Новости</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Публикации</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Прайсы</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Документации</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Вопрос-ответ</a>
+                            </li>
+                        </ul>
+                    </div>
 
-                <div class="page-footer__catalog">
-                    <button class="page-footer__list-title-button">
-                        <h3 class="page-footer__list-title page-footer__list-title--color-orange">Каталог</h3>
-                    </button>
-                    <ul class="page-footer__list">
-                        <li class="page-footer__list-item">
-                            <a href="#">Электромеханические реле</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Термопринтеры</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Беспроводные модули</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Сенсорные панели</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Элементы защиты цепей</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Устройства защиты цепей</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Электролитические конденсаторы</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Датчики давления и чувствительные элементы</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Разъемы, держатели и кабельные сборки</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Память</a>
-                        </li>
-                    </ul>
-                </div>
+                    <div class="page-footer__catalog">
+                        <a class="page-footer__list-title-button">
+                            <h3 class="page-footer__list-title page-footer__list-title--color-orange">Каталог</h3>
+                        </a>
+                        <ul class="page-footer__list">
+                            <li class="page-footer__list-item">
+                                <a href="#">Электромеханические реле</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Термопринтеры</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Беспроводные модули</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Сенсорные панели</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Элементы защиты цепей</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Устройства защиты цепей</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Электролитические конденсаторы</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Датчики давления и чувствительные элементы</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Разъемы, держатели и кабельные сборки</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Память</a>
+                            </li>
+                        </ul>
+                    </div>
 
-                <div class="page-footer__producers">
-                    <button class="page-footer__list-title-button">
-                        <h3 class="page-footer__list-title page-footer__list-title--color-orange">Производители</h3>
-                    </button>
-                    <ul class="page-footer__list">
-                        <li class="page-footer__list-item">
-                            <a href="#">Attend</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Celduc</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Commeng</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Delson Technology</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Dynamix</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Fujitsu Components</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Fujitsu Semiconductor</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">HTDisplay</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">INSIGNIS</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Kavlico</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+                    <div class="page-footer__producers">
+                        <a class="page-footer__list-title-button">
+                            <h3 class="page-footer__list-title page-footer__list-title--color-orange">Производители</h3>
+                        </a>
+                        <ul class="page-footer__list">
+                            <li class="page-footer__list-item">
+                                <a href="#">Attend</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Celduc</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Commeng</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Delson Technology</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Dynamix</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Fujitsu Components</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Fujitsu Semiconductor</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">HTDisplay</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">INSIGNIS</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Kavlico</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
             <address class="page-footer__address">
                 <div class="page-footer__address-mail">
                     <svg role="img" class="page-footer__address-mail-svg" width="24" height="20">
@@ -269,8 +269,6 @@
                 </a>
             </small>
         </div>
-
-
     </div>
 </footer>
   

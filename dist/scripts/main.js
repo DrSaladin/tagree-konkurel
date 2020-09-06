@@ -1,11 +1,43 @@
 (function () {
   'use strict';
 
-  jQuery(document).ready(function ($) {
-    $('#lightSlider').lightSlider({
+  $(document).ready(function() {
+   $("#lightSlider").lightSlider({
+      item: 6,
+      auto: false,
+      slideMargin: 10,
       slideMove: 1,
-    });
-  });
+      loop: true,
+      controls: false,
+      speed: 600,
+      pager: false,
+      keyPress: true,
+      mode: 'slide',
+      responsive: [{
+      breakpoint: 400,
+      settings: {
+         item: 1,
+         slideMove: 1,
+         slideMargin: 6,
+       }
+     }]
+   });
+ });
+
+ $(document).ready(function() {
+   $("#lightSliderGoods").lightSlider({
+      item: 1,
+      auto: false,
+      slideMargin: 10,
+      slideMove: 1,
+      loop: true,
+      controls: false,
+      speed: 600,
+      pager: false,
+      keyPress: true,
+      mode: 'slide',
+   });
+ });
 
   if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPad/i))) {
       document

@@ -1,174 +1,191 @@
-
 .about-us {
   position: relative;
 
-  &--positioning {
+  &--index {
       margin-top: -230px;
       padding-top: 370px;
       padding-bottom: 200px;
-  }
-
-  &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0.1;
-      background-image: url(../assets/images/about-us__bg.jpg);
-      background-repeat: no-repeat;
-      background-size: cover;
-      z-index: -1;
-  }
-
-  &__wrapper {
-      display: flex;
-      min-height: 600px;
-  }
-
-  &__title {
-      font-family: @sans-font;
-      font-size: 60px;
-      color: #000000;
-  }
-
-  &__logo {
-      width: 65%;
-      height: auto;
-      background-image: url(../assets/images/about-us__img.png);
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center right;
-  }
-
-  &__info-block {
-      position: relative;
-      width: 35%;
-      padding: 20px 20px 20px 40px;
-      box-sizing: border-box;
-  }
-
-  &__lead {
-      position: relative;
-      font-family: @sans-font;
-      font-size: 24px;
-      color: #000000;
-      font-weight: bold;
-      margin-bottom: 40px;
-      line-height: 30px;
-  }
-
-  &__info {
-      position: relative;
-      font-family: @sans-font;
-      font-size: 16px;
-      color: #767676;
-      line-height: 30px;
-      margin-bottom: 70px;
-  }
-
-  &__lead::after {
-      position: absolute;
-      content: "";
-      width: 4px;
-      height: 100%;
-      background: linear-gradient(to bottom, #F9B77F 30%, #FF7C0C 30%);
-      top: 0;
-      left: -40px;
-  }
-
-  &__more-button {
-      display: block;
-      background: transparent;
-      border: solid 2px #FF7C0C;
-      border-radius: 3px;
-      width: 204px;
-      height: 56px;
-      font-family: @sans-font;
-      font-size: 18px;
-      font-weight: bold;
-      color: #000000;
-      padding: 5px 10px;
-      box-sizing: border-box;
-      text-decoration: none;
-      text-align: center;
-      line-height: 40px;
-
-      &:hover {
-          color: #ffffff;
-          background-color: #FF7C0C;
-      }
-  }
-
-}
-
-@media @bw1560 {
-    .about-us--positioning {
-        margin-top: -175px;
-        padding-top: 270px;
     }
-}
 
-@media @bw1140 {
-    .about-us {
-        margin-top: -120px;
-        padding-top: 170px;
-
-        &__wrapper {
-            min-width: 1050px;
+    @media @bw1560 {
+        &--index {
+            margin-top: -175px;
+            padding-top: 270px;
         }
+    }
 
+    @media @bw1140 {
+        &--index {
+            margin-top: -120px;
+            padding-top: 170px;
+        }
+    }
+
+    @media @bw768 {
+        &--index {
+            padding-bottom: 30px;
+        }
+    }
+
+    @media @bw768 {
+        &--index {
+            padding-bottom: 30px;
+        }
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.1;
+        background-image: url(../assets/images/about-us__bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+    }
+
+    @media @bw1140 {
         &::after {
             background-image: none;
         }
+    } 
+
+    &__wrapper {
+        display: flex;
+        min-height: 600px;
     }
-}
 
-@media @bw768 {
-    .about-us {
-
-        &--positioning {
-            padding-bottom: 30px;
+    @media @bw1140 {
+        &__wrapper {
+            min-width: 1050px;
         }
+    }
 
+    @media @bw768 {
         &__wrapper {
             min-height: 400px;
         }
+    }
 
+    @media @bw400 {
+        &__wrapper {
+            min-width: auto;
+        }
+    }
+
+    &__title {
+        font-family: @sans-font;
+        font-size: 60px;
+        color: #000000;
+    }
+
+    @media @bw768 {
         &__title {
             font-size: 48px;
             margin-bottom: 0;
         }
+    }
 
-        &__lead {
-            font-size: 18px;
+    &__logo {
+        width: 65%;
+        height: auto;
+        background-image: url(../assets/images/about-us__img.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center right;
+    }
+
+    @media @bw400 {
+        &__logo {
+            display: none;
         }
+    }
 
+    &__info-block {
+        position: relative;
+        width: 35%;
+        padding: 20px 20px 20px 40px;
+        box-sizing: border-box;
+    }
+
+    @media @bw768 {
         &__info-block {
             width: 35%;
             padding: 20px 10px 10px 30px;
         }
+    }
 
+    @media @bw400 {
+        &__info-block {
+            min-width: 100%;
+        }
+    }
+
+    &__lead {
+        position: relative;
+        font-family: @sans-font;
+        font-size: 24px;
+        color: #000000;
+        font-weight: bold;
+        margin-bottom: 40px;
+        line-height: 30px;
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, #F9B77F 30%, #FF7C0C 30%);
+            top: 0;
+            left: -40px;
+        }
+    }
+
+    @media @bw768 {
+        &__lead {
+            font-size: 18px;
+        }
+    }
+
+    &__info {
+        position: relative;
+        font-family: @sans-font;
+        font-size: 16px;
+        color: #767676;
+        line-height: 30px;
+        margin-bottom: 70px;
+    }
+
+    @media @bw768 {
         &__info {
             margin-bottom: 20px;
         }
     }
-}
 
-@media @bw400 {
-    .about-us {
-        &__logo {
-            display: none;
-        }
+    &__more-button {
+        display: block;
+        background: transparent;
+        border: solid 2px #FF7C0C;
+        border-radius: 3px;
+        width: 204px;
+        height: 56px;
+        font-family: @sans-font;
+        font-size: 18px;
+        font-weight: bold;
+        color: #000000;
+        padding: 5px 10px;
+        box-sizing: border-box;
+        text-decoration: none;
+        text-align: center;
+        line-height: 40px;
 
-        &__wrapper {
-            min-width: auto;
-        }
-
-        &__info-block {
-            min-width: 100%;
+        &:hover {
+            color: #ffffff;
+            background-color: #FF7C0C;
         }
     }
 }

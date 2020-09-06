@@ -33,51 +33,51 @@
 
 <body class="body">
 
-  <header class="page-header page-header--margin-bottom">
+  <header class="page-header">
     <div class="page-header__wrapper container">
-        <nav class="page-header__nav page-nav page-nav--closed">
-            <div class="page-nav__wrapper">
-                <a class="page-nav__logo-link" href="index.html">
-                    <picture>
-                        <img class="page-nav__logo-img" src="assets/images/logo.png" alt="Компания Конкур" width="207" height="41">
-                    </picture>
+        <nav class="page-header__nav page-nav page-nav--closed" id="js-nav">
+    <div class="page-nav__wrapper">
+        <a class="page-nav__logo-link" href="index.html">
+            <picture>
+                <img class="page-nav__logo-img" src="assets/images/logo.png" alt="Компания Конкур" width="207" height="41">
+            </picture>
+        </a>
+        <button class="page-nav__hamburger" id="js-navBurger" type="button">
+            <span class="visually-hidden">Управление мобильным меню</span>
+        </button>
+        <ul class="page-nav__list">
+            <li class="js-navItem page-nav__list-item page-nav__list-item--submenu-mark">
+                <a href="">
+                    Каталог
                 </a>
-                <button class="page-nav__hamburger" type="button">
-                    <span class="visually-hidden">Управлением мобильным меню</span>
-                </button>
-                <ul class="page-nav__list">
-                    <li class="page-nav__list-item page-nav__list-item--submenu-mark">
-                        <a href="">
-                            Каталог
-                        </a>
-                    </li>
-                    <li class="page-nav__list-item page-nav__list-item--submenu-mark">
-                        <a href="">
-                            Производители
-                        </a>
-                    </li>
-                    <li class="page-nav__list-item">
-                        <a href="">
-                            О компании
-                        </a>
-                    </li>
-                    <li class="page-nav__list-item page-nav__list-item--submenu-mark">
-                        <a href="">
-                            Прочее
-                        </a>
-                    </li>
-                </ul>
-                <form class="page-nav__search-form" action="index.html" method="GET">
-                    <label class="page-nav__search-label" for="page-search">
-                        <svg width="23" height="23">
-                            <use xlink:href="assets/icons/symbols.svg#search"></use>
-                        </svg>
-                    </label>
-                    <input class="page-nav__search-input page-nav__search-input--hidden" type="search" id="page-search" name="page-search" placeholder="Поиск по базе компонентов">
-                    <button class="page-nav__search-submit visually-hidden" type="submit">Поиск по сайту</button>
-                </form>
-            </div>
-        </nav>
+            </li>
+            <li class="js-navItem page-nav__list-item page-nav__list-item--submenu-mark">
+                <a href="">
+                    Производители
+                </a>
+            </li>
+            <li class="js-navItem page-nav__list-item">
+                <a href="">
+                    О компании
+                </a>
+            </li>
+            <li class="js-navItem page-nav__list-item page-nav__list-item--submenu-mark">
+                <a href="">
+                    Прочее
+                </a>
+            </li>
+        </ul>
+        <form class="page-nav__search-form" action="index.html" method="GET">
+            <label class="page-nav__search-label" for="page-search">
+                <svg role="img" width="23" height="23">
+                    <use xlink:href="assets/icons/symbols.svg#search"></use>
+                </svg>
+            </label>
+            <input class="page-nav__search-input page-nav__search-input--hidden" type="search" id="page-search" name="page-search" placeholder="Поиск по базе компонентов">
+            <button class="page-nav__search-submit visually-hidden" type="submit">Поиск по сайту</button>
+        </form>
+    </div>
+</nav>
         <div class="page-header__user-block">
             <div class="page-header__user-block-contacts">
                 <a href="tel:+78124413638">
@@ -96,7 +96,7 @@
                     77
                 </span>
             </button>
-        </div>
+        </div> 
     </div>
 </header>
   <main class="main">
@@ -149,6 +149,11 @@
         <button type="button" id="js-sliderPrev">
             <span class="visually-hidden">Предыдущий слайд</span>
         </button>
+        <svg class="page-slider__prev-background" width="100" height="100" viewBox="0 0 31.83 31.83"
+            aria-hidden="true" stroke-dasharray="100 100">
+            <circle r="15.915" cx="15.915" cy="15.915" stroke-width="11.83">
+            </circle>
+        </svg>
         <div class="page-slider__next-arrow-wrapper">
             <button type="button" id="js-sliderNext">
                 <span class="visually-hidden">Следующий слайд</span>
@@ -158,7 +163,7 @@
                 <circle r="15.915" cx="15.915" cy="15.915" stroke-width="11.83">
                 </circle>
             </svg>
-            <svg class="module__icon-pie-pie" width="100" height="100" viewBox="0 0 31.83 31.83"
+            <svg class="page-slider__next-background" width="100" height="100" viewBox="0 0 31.83 31.83"
                 aria-hidden="true" stroke-dasharray="100 100">
                 <circle r="15.915" cx="15.915" cy="15.915" stroke-width="11.83">
                 </circle>
@@ -167,12 +172,12 @@
     </div>
 </div>
 
-  <div class="goods-overview goods-overview--positioning">
+  <div class="goods-overview">
     <div class="goods-overview__wrapper">
         <ul class="goods-overview__list">
             <li class="goods-overview__list-item">
                 <a href="" class="goods-overview__list-item-link">
-                    <svg width="42" height="46">
+                    <svg role="img" width="42" height="46">
                         <use xlink:href="assets/icons/symbols.svg#banner-icon-1"></use>
                     </svg>
                     <span class="goods-overview__list-item-section">
@@ -185,7 +190,7 @@
             </li>
             <li class="goods-overview__list-item">
                 <a href="" class="goods-overview__list-item-link">
-                    <svg width="44" height="45">
+                    <svg role="img" width="44" height="45">
                         <use xlink:href="assets/icons/symbols.svg#banner-icon-2"></use>
                     </svg>
                     <span class="goods-overview__list-item-section">
@@ -198,7 +203,7 @@
             </li>
             <li class="goods-overview__list-item">
                 <a href="" class="goods-overview__list-item-link">
-                    <svg width="29" height="46">
+                    <svg role="img" width="29" height="46">
                         <use xlink:href="assets/icons/symbols.svg#banner-icon-3"></use>
                     </svg>
                     <span class="goods-overview__list-item-section">
@@ -211,7 +216,7 @@
             </li>
             <li class="goods-overview__list-item">
                 <a href="" class="goods-overview__list-item-link">
-                    <svg width="46" height="46">
+                    <svg role="img" width="46" height="46">
                         <use xlink:href="assets/icons/symbols.svg#banner-icon-4"></use>
                     </svg>
                     <span class="goods-overview__list-item-section">
@@ -224,7 +229,7 @@
             </li>
             <li class="goods-overview__list-item">
                 <a href="" class="goods-overview__list-item-link">
-                    <svg width="47" height="45">
+                    <svg role="img" width="47" height="45">
                         <use xlink:href="assets/icons/symbols.svg#banner-icon-5"></use>
                     </svg>
                     <span class="goods-overview__list-item-section">
@@ -239,66 +244,59 @@
     </div>
 </div>
 
-  <div class="partners-list partners-list--positioning">
-    <div class="container">
-        <ul class="partners-list__slider-list">
-            <li class="partners-list__slider-list-item">
-                <a href="" class="partners-list__slider-link">
-
-                </a>
-            </li>
-            <li class="partners-list__slider-list-item">
-                <a href="" class="partners-list__slider-link">
-                    <picture>
-                        <img src="assets/images/te.png" alt="Товары TE Connectivity в Конкур Электрик" width="87"
-                            height="32">
-                    </picture>
-                </a>
-            </li>
-            <li class="partners-list__slider-list-item">
-                <a href="" class="partners-list__slider-link">
-                    <picture>
-                        <img src="assets/images/winbond.png" alt="Товары Winbond в Конкур Электрик" width="136"
-                            height="17">
-                    </picture>
-                </a>
-            </li>
-            <li class="partners-list__slider-list-item">
-                <a href="" class="partners-list__slider-link">
-                    <picture>
-                        <img src="assets/images/attend.png" alt="Товары Attend в Конкур Электрик" width="180"
-                            height="36">
-                    </picture>
-                </a>
-            </li>
-            <li class="partners-list__slider-list-item">
-                <a href="" class="partners-list__slider-link">
-                    <picture>
-                        <img src="assets/images/vtouch.png" alt="Товары Vtouch в Конкур Электрик" width="114"
-                            height="23">
-                    </picture>
-                </a>
-            </li>
-            <li class="partners-list__slider-list-item">
-                <a href="" class="partners-list__slider-link">
-                    <picture>
-                        <img src="assets/images/cygwayon.png" alt="Товары Cygwayon в Конкур Электрик" width="167"
-                            height="22">
-                    </picture>
-                </a>
-            </li>
-            <li class="partners-list__slider-list-item">
-                <a href="" class="partners-list__slider-link">
-                    <picture>
-                        <img src="assets/images/fujitsu.png" alt="Товары Fujitsu в Конкур Электрик" width="129"
-                            height="60">
-                    </picture>
-                </a>
-            </li>
-        </ul>
-    </div>
+  <div class="partners-list partners-list--index">
+    <ul class="partners-list__slider-list" id="lightSlider">
+        <li class="partners-list__slider-list-item">
+            <a href="" class="partners-list__slider-link">
+                <picture>
+                    <img src="assets/images/te.png" alt="Товары TE Connectivity в Конкур Электрик" width="87"
+                        height="32">
+                </picture>
+            </a>
+        </li>
+        <li class="partners-list__slider-list-item">
+            <a href="" class="partners-list__slider-link">
+                <picture>
+                    <img src="assets/images/winbond.png" alt="Товары Winbond в Конкур Электрик" width="136"
+                        height="17">
+                </picture>
+            </a>
+        </li>
+        <li class="partners-list__slider-list-item">
+            <a href="" class="partners-list__slider-link">
+                <picture>
+                    <img src="assets/images/attend.png" alt="Товары Attend в Конкур Электрик" width="180"
+                        height="36">
+                </picture>
+            </a>
+        </li>
+        <li class="partners-list__slider-list-item">
+            <a href="" class="partners-list__slider-link">
+                <picture>
+                    <img src="assets/images/vtouch.png" alt="Товары Vtouch в Конкур Электрик" width="114"
+                        height="23">
+                </picture>
+            </a>
+        </li>
+        <li class="partners-list__slider-list-item">
+            <a href="" class="partners-list__slider-link">
+                <picture>
+                    <img src="assets/images/cygwayon.png" alt="Товары Cygwayon в Конкур Электрик" width="167"
+                        height="22">
+                </picture>
+            </a>
+        </li>
+        <li class="partners-list__slider-list-item">
+            <a href="" class="partners-list__slider-link">
+                <picture>
+                    <img src="assets/images/fujitsu.png" alt="Товары Fujitsu в Конкур Электрик" width="129"
+                        height="60">
+                </picture>
+            </a>
+        </li>
+    </ul>
 </div>
-  <section class="news news--positioning js-appear">
+  <section class="news news--index js-appear">
   <div class="container">
     <div class="news__title-block">
       <h2 class="news__section-title">
@@ -389,42 +387,40 @@
     </div>
   </div>
 </section>
-  <div class="facts-figures">
+  <div class="facts-figures js-appear">
   <div class="container">
-    <div class="facts-figures__wrapper">
-      <ul class="facts-figures__list">
-        <li class="facts-figures__list-item facts-figures__list-item--orange">
-          <p class="facts-figures__figures countid-element js-counter" data-start='0' data-end='15' data-speed='3'>
-            15
-          </p>
-          <p class="facts-figures__title">
-            Лет на рынке
-          </p>
-        </li>
-        <li class="facts-figures__list-item facts-figures__list-item--black">
-          <p class="facts-figures__figures facts-figures__figures--added-plus countid-element js-counter" data-start='0'
-            data-end='10000'
-            data-speed='2000'>
-            10000
-          </p>
-          <p class="facts-figures__title">
-            Контрактов
-          </p>
-        </li>
-        <li class="facts-figures__list-item facts-figures__list-item--green">
-          <p class="facts-figures__figures facts-figures__figures--added-plus countid-element js-counter" data-start='0'
-            data-end='6000' data-speed='1000'>
-            6000
-          </p>
-          <p class="facts-figures__title">
-            Компанентов в каталоге
-          </p>
-        </li>
-      </ul>
-    </div>
+    <ul class="facts-figures__list" id="js-aboutFactsWrapper">
+      <li class="facts-figures__list-item facts-figures__list-item--orange">
+        <p class="facts-figures__figures js-counter" data-start='0' data-end='15' data-speed='3'>
+          15
+        </p>
+        <p class="facts-figures__title">
+          Лет на рынке
+        </p>
+      </li>
+      <li class="facts-figures__list-item facts-figures__list-item--black ">
+        <p class="facts-figures__figures facts-figures__figures--added-plus js-counter" data-start='0'
+          data-end='10000'
+          data-speed='2000'>
+          10000
+        </p>
+        <p class="facts-figures__title">
+          Контрактов
+        </p>
+      </li>
+      <li class="facts-figures__list-item facts-figures__list-item--green">
+        <p class="facts-figures__figures facts-figures__figures--added-plus js-counter" data-start='0'
+          data-end='6000' data-speed='1000'>
+          6000
+        </p>
+        <p class="facts-figures__title">
+          Компанентов в каталоге
+        </p>
+      </li>
+    </ul>
   </div>
 </div>
-  <section class="about-us about-us--positioning" id="js-aboutFactsWrapper">
+  <section class="about-us about-us--index">
   <div class="container">
     <h2 class="about-us__title">
       О компании
@@ -457,124 +453,124 @@
   <footer class="page-footer">
     <div class="container">
         <div class="page-footer__wrapper">
-        <nav class="page-footer__nav">
-                <div class="page-footer__about-company">
-                    <button class="page-footer__list-title-button">
-                        <h3 class="page-footer__list-title">О компании</h3>
-                    </button>
-                    <ul class="page-footer__list">
-                        <li class="page-footer__list-item">
-                            <a href="#">О нас</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Вакансии</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Сертификаты</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Контакты</a>
-                        </li>
-                    </ul>
+            <nav class="page-footer__nav">
+                    <div class="page-footer__about-company">
+                        <a class="page-footer__list-title-button">
+                            <h3 class="page-footer__list-title">О компании</h3>
+                        </a>
+                        <ul class="page-footer__list">
+                            <li class="page-footer__list-item">
+                                <a href="#">О нас</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Вакансии</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Сертификаты</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Контакты</a>
+                            </li>
+                        </ul>
 
-                    <button class="page-footer__list-title-button">
-                        <h3 class="page-footer__list-title">Полезная информация</h3>
-                    </button>
-                    <ul class="page-footer__list">
-                        <li class="page-footer__list-item">
-                            <a href="#">Новости</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Публикации</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Прайсы</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Документации</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Вопрос-ответ</a>
-                        </li>
-                    </ul>
-                </div>
+                        <a class="page-footer__list-title-button">
+                            <h3 class="page-footer__list-title">Полезная информация</h3>
+                        </a>
+                        <ul class="page-footer__list">
+                            <li class="page-footer__list-item">
+                                <a href="#">Новости</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Публикации</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Прайсы</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Документации</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Вопрос-ответ</a>
+                            </li>
+                        </ul>
+                    </div>
 
-                <div class="page-footer__catalog">
-                    <button class="page-footer__list-title-button">
-                        <h3 class="page-footer__list-title page-footer__list-title--color-orange">Каталог</h3>
-                    </button>
-                    <ul class="page-footer__list">
-                        <li class="page-footer__list-item">
-                            <a href="#">Электромеханические реле</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Термопринтеры</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Беспроводные модули</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Сенсорные панели</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Элементы защиты цепей</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Устройства защиты цепей</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Электролитические конденсаторы</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Датчики давления и чувствительные элементы</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Разъемы, держатели и кабельные сборки</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Память</a>
-                        </li>
-                    </ul>
-                </div>
+                    <div class="page-footer__catalog">
+                        <a class="page-footer__list-title-button">
+                            <h3 class="page-footer__list-title page-footer__list-title--color-orange">Каталог</h3>
+                        </a>
+                        <ul class="page-footer__list">
+                            <li class="page-footer__list-item">
+                                <a href="#">Электромеханические реле</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Термопринтеры</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Беспроводные модули</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Сенсорные панели</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Элементы защиты цепей</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Устройства защиты цепей</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Электролитические конденсаторы</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Датчики давления и чувствительные элементы</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Разъемы, держатели и кабельные сборки</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Память</a>
+                            </li>
+                        </ul>
+                    </div>
 
-                <div class="page-footer__producers">
-                    <button class="page-footer__list-title-button">
-                        <h3 class="page-footer__list-title page-footer__list-title--color-orange">Производители</h3>
-                    </button>
-                    <ul class="page-footer__list">
-                        <li class="page-footer__list-item">
-                            <a href="#">Attend</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Celduc</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Commeng</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Delson Technology</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Dynamix</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Fujitsu Components</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Fujitsu Semiconductor</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">HTDisplay</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">INSIGNIS</a>
-                        </li>
-                        <li class="page-footer__list-item">
-                            <a href="#">Kavlico</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+                    <div class="page-footer__producers">
+                        <a class="page-footer__list-title-button">
+                            <h3 class="page-footer__list-title page-footer__list-title--color-orange">Производители</h3>
+                        </a>
+                        <ul class="page-footer__list">
+                            <li class="page-footer__list-item">
+                                <a href="#">Attend</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Celduc</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Commeng</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Delson Technology</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Dynamix</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Fujitsu Components</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Fujitsu Semiconductor</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">HTDisplay</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">INSIGNIS</a>
+                            </li>
+                            <li class="page-footer__list-item">
+                                <a href="#">Kavlico</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
             <address class="page-footer__address">
                 <div class="page-footer__address-mail">
                     <svg role="img" class="page-footer__address-mail-svg" width="24" height="20">
@@ -619,24 +615,24 @@
                 </a>
             </small>
         </div>
-
-
     </div>
 </footer>
   
   <script src="scripts/jquery-3.4.1.min.js"></script>
   <script src="scripts/slick.min.js"></script>
-  <script src="scripts/main.js"></script>
   <script src="scripts/svg4everybody.js"></script>
   <script>
      // run it now or whenever you are ready
     svg4everybody();
   </script>
-  <script src="scripts/countid.js"></script>
-  <script src="scripts/appear-init.js"></script>
+  <script src="scripts/lightslider.js"></script>
   <script src="scripts/jquery.appear.js"></script>
-
-  <object class="icon visually-hidden" data="assets/icons/symbols.svg" type="image/svg+xml"></object>
-</body>
+  <script src="scripts/appear-init.js"></script>
+  <script src="scripts/countid.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/jquery.overlayScrollbars.js"></script>
+  <script src="scripts/picturefill.js"></script>
+  
+  </body>
 
 </html>

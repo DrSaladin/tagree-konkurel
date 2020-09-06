@@ -1,37 +1,37 @@
 .goods-overview {
     position: relative;
 
-    &__wrapper { 
+    &--index { 
         border-radius: 3px;
         background-color: rgb(255, 255, 255);
         box-shadow: 0px 6px 30px 0px rgba(255, 124, 12, 0.22);
         width: 1140px;
-        min-height: 162px;
+        height: 162px;
         box-sizing: border-box;
         padding: 30px;
         margin: -80px auto 60px;
     }
 
     @media @bw1560 {
-        &__wrapper {
+        .goods-overview {
             width: 1060px;
         }
     }
 
     @media @bw1140 {
-        &__wrapper {
+        &--index {
             margin: -80px 40px 50px;
         }
     }
 
     @media @bw768 {
-        &__wrapper {
+        &--index {
             margin: -80px 20px 50px;
         }
     }
 
     @media @bw400 {
-        &__wrapper {
+        &--index {
             margin-bottom: 30px;
         }
     }

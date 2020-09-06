@@ -3,7 +3,7 @@
    background-color: #10100F;
    padding: 120px 0 80px 0;
 
-   &::before {
+    &::before {
        position: absolute;
        content: "";
        left: 0;
@@ -15,7 +15,7 @@
        box-shadow: 32px 0px 117px 0px rgba(255, 124, 12, 0.22);
    }
 
-   &::after {
+    &::after {
        content: "";
        position: absolute;
        background-image: url(../assets/images/shadow.png);
@@ -38,23 +38,23 @@
         }
    }
 
-   & ul {
+    & ul {
        padding: 0;
        margin: 0;
        list-style: none;
    }
 
-   & a {
+    & a {
        text-decoration: none;
    }
 
-   &__wrapper {
+    &__wrapper {
        display: flex;
        margin-bottom: 85px;
    }
 
    @media @bw768 {
-       &__wrapper {
+        &__wrapper {
             flex-wrap: wrap;
             margin-bottom: 0;
         }
@@ -67,7 +67,7 @@
    }
 
 
-   &__list-title {
+    &__list-title {
        font-family: @sans-font;
        font-size: 14px;
        font-weight: bold;
@@ -78,12 +78,12 @@
     }
 
    @media @bw768 {
-       &__list-title {
+        &__list-title {
             color: #FF7C0C;
         }
     }
 
-   &__list-title-button {
+    &__list-title-button {
        background-color: transparent;
        border: none;
        padding: 0;
@@ -92,7 +92,7 @@
     }
 
     @media @bw768 {
-        &__list-title-button {
+         &__list-title-button {
             margin-bottom: 35px;
             cursor: pointer;
             text-align: left;
@@ -115,16 +115,16 @@
         }
     }
 
-   &__address svg {
+    &__address svg {
        margin-bottom: 10px;
     }
 
-   &__about-company {
+    &__about-company {
        width: 33%;
        position: relative;
        z-index: 2;
 
-       & a {
+        & a {
            font-family: @sans-font;
            font-size: 15px;
            color: #000000;
@@ -151,7 +151,7 @@
         }
     }
 
-   &__disclaimer {
+    &__disclaimer {
        display: flex;
        position: relative;
        z-index: 2;
@@ -164,7 +164,7 @@
     }
 
    @media @bw768 {
-       &__disclaimer {
+        &__disclaimer {
             flex-direction: column;
             position: absolute;
             bottom: 100px;
@@ -178,19 +178,19 @@
         }
     }
 
-   &__disclaimer-developers-link {
+     &__disclaimer-developers-link {
        align-items: center;
        display: flex;
        font-family: @sans-font;
    }
 
-   &__disclaimer-copyright {
+     &__disclaimer-copyright {
        color: #959595;
        font-family: @sans-font;
     }
 
    @media @bw768 {
-       &__disclaimer-copyright {
+        &__disclaimer-copyright {
             order: 3;
         }
     }
@@ -201,13 +201,13 @@
         }
     }
 
-   &__disclaimer-developers span {
+    &__disclaimer-developers span {
        margin-right: 10px;
        color: #959595;
     }
 
    @media @bw768 {
-       &__disclaimer-developers {
+        &__disclaimer-developers {
             order: 2;
         }
     }
@@ -218,15 +218,15 @@
         }
     }
 
-   &__disclaimer-svg {
+    &__disclaimer-svg {
        color: #ffffff;
     }
 
-   &__catalog {
+     &__catalog {
        width: 36%;
        z-index: 1;
 
-       & a {
+        & a {
            font-family: @sans-font;
            font-size: 15px;
            color: #959595;
@@ -235,11 +235,11 @@
         }
     }
 
-   &__producers {
+     &__producers {
        width: 23%;
        z-index: 1;
 
-       & a {
+         & a {
            font-family: @sans-font;
            font-size: 15px;
            color: #959595;
@@ -248,11 +248,11 @@
         }
     }
 
-   &__address {
+     &__address {
        width: 23%;
        text-align: right;
 
-       & a {
+        & a {
            color: #ffffff;
            font-style: normal;
            display: block;
@@ -263,7 +263,7 @@
             }
         }
 
-       & p {
+        & p {
            font-style: normal;
            margin-left: auto;
            width: 215px;
@@ -292,7 +292,7 @@
         }
     }
 
-   &__nav {
+    &__nav {
        color: #ffffff;
        display: flex;
        justify-content: space-between;
@@ -316,7 +316,7 @@
     }
 
 
-   &__address-more {
+    &__address-more {
        border: 2px solid #FF7C0C;
        border-radius: 3px;
        width: 204px;
@@ -335,19 +335,20 @@
         }
     }
 
-   &__address-mail,
-   &__address-tel {
+    &__address-mail,
+    &__address-tel {
        margin-bottom: 40px;
     }
 
-   &__address-tax-info {
+    &__address-tax-info {
        margin-top: 0;
        margin-bottom: 55px;
     }
 
-   &__list-title--color-orange {
+    &__list-title--color-orange {
        color: #FF7C0C;
     }
+    
 
    @media @bw768 {
        &__disclaimer-logo {

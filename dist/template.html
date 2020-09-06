@@ -35,33 +35,34 @@
 
   <header class="page-header">
     <div class="page-header__wrapper container">
-        <nav class="page-header__nav page-nav page-nav--closed" id="js-nav">
+        <nav class="page-header__nav page-nav" id="js-nav">
     <div class="page-nav__wrapper">
         <a class="page-nav__logo-link" href="index.html">
             <picture>
-                <img class="page-nav__logo-img" src="assets/images/logo.png" alt="Компания Конкур" width="207" height="41">
+                <img class="page-nav__logo-img" src="assets/images/logo.png" 
+                alt="Компания Конкур" width="207" height="41">
             </picture>
         </a>
-        <button class="page-nav__hamburger" id="js-navBurger" type="button">
+        <button id="js-navBurger" class="page-nav__hamburger" type="button">
             <span class="visually-hidden">Управление мобильным меню</span>
         </button>
         <ul class="page-nav__list">
-            <li class="js-navItem page-nav__list-item page-nav__list-item--submenu-mark">
+            <li class="page-nav__list-item page-nav__list-item--submenu-mark">
                 <a href="">
                     Каталог
                 </a>
             </li>
-            <li class="js-navItem page-nav__list-item page-nav__list-item--submenu-mark">
+            <li class="page-nav__list-item page-nav__list-item--submenu-mark">
                 <a href="">
                     Производители
                 </a>
             </li>
-            <li class="js-navItem page-nav__list-item">
+            <li class="page-nav__list-item">
                 <a href="">
                     О компании
                 </a>
             </li>
-            <li class="js-navItem page-nav__list-item page-nav__list-item--submenu-mark">
+            <li class="page-nav__list-item page-nav__list-item--submenu-mark">
                 <a href="">
                     Прочее
                 </a>
@@ -89,7 +90,7 @@
             </div>
             <button class="page-header__user-block-cart" type="button">
                 <span class="page-header__cart-text">Ваш заказ</span>
-                <svg width="24" height="23">
+                <svg role="img" width="24" height="23">
                     <use xlink:href="assets/icons/symbols.svg#shopping-cart"></use>
                 </svg>
                 <span class="page-header__user-block-cart-indicator page-header__user-block-cart-indicator--hidden">

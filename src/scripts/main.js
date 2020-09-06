@@ -26,7 +26,7 @@
 
  $(document).ready(function() {
    $("#lightSliderGoods").lightSlider({
-      item: 1,
+      item: 5,
       auto: false,
       slideMargin: 10,
       slideMove: 1,

@@ -1,5 +1,6 @@
 .goods-overview {
     position: relative;
+    min-height: 162px;
 
     &--index { 
         border-radius: 3px;
@@ -12,27 +13,21 @@
         margin: -80px auto 60px;
     }
 
-    @media @bw1560 {
-        .goods-overview {
-            width: 1060px;
+    @media @bw1310 {
+        &--index {
+            margin: -80px auto 50px 85px;
         }
     }
 
-    @media @bw1140 {
+    @media @bw1120 {
         &--index {
             margin: -80px 40px 50px;
         }
     }
 
-    @media @bw768 {
-        &--index {
-            margin: -80px 20px 50px;
-        }
-    }
-
     @media @bw400 {
         &--index {
-            margin-bottom: 30px;
+            margin: -80px 20px 30px;
         }
     }
 
@@ -67,7 +62,7 @@
         content: "";
         width: 4px;
         height: 4px;
-        background-color: #000000;
+        background-color: @color-black;
         border-radius: 50%;
         left: -10px;
         top: 10px;

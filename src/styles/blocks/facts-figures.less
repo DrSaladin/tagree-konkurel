@@ -1,7 +1,13 @@
 .facts-figures {
   position: relative;
-  opacity: 0;
   z-index: 2;
+
+  @media @bw768 {
+    &__wrapper {
+      overflow-x: scroll;
+    }
+  }
+
 
   &__list {
     list-style: none;
@@ -21,7 +27,7 @@
     padding: 100px;
   }
 
-  @media @bw1560 {
+  @media @bw1853 {
     &__list-item {
       width: 350px;
       height: 350px;
@@ -29,7 +35,7 @@
     }
   }
 
-  @media @bw1140 {
+  @media @bw1253 {
     &__list-item {
       width: 220px;
       height: 220px;
@@ -51,14 +57,16 @@
   }
 
   &__list-item--orange {
-    background-color: #FF7C0C;
+    background-color: @color-orange;
     background-image: url(../assets/images/bg-img-1.png);
     box-shadow: 0px 32px 117px 0px rgba(255, 124, 12, 0.22);
+    opacity: 0;
+    transition: .5s;
   }
 
-  @media @bw1560 {
+  @media @bw1850 {
     &__list-item--orange {
-      background-color: #FF7C0C;
+      background-color: @color-orange;
       background-image: url(../assets/images/bg-img-1.png);
     }
   }
@@ -67,9 +75,11 @@
     background-color: #10100F;
     background-image: url(../assets/images/bg-item-2.png);
     box-shadow: 0px 32px 117px 0px rgba(16, 16, 15, 0.22);
+    opacity: 0;
+    transition: 1s;
   }
 
-  @media @bw1560 {
+  @media @bw1850 {
     &__list-item--black {
       background-color: #10100F;
       background-image: url(../assets/images/bg-item-2.png);
@@ -80,16 +90,18 @@
     background-color: #00B557;
     background-image: url(../assets/images/bg-img-3.png);
     box-shadow: 0px 32px 117px 0px rgba(0, 181, 87, 0.22);
+    opacity: 0;
+    transition: 1.5s;
   }
 
-  @media @bw1560 {
+  @media @bw1850 {
     &__list-item--green {
       background-color: #00B557;
       background-image: url(../assets/images/bg-img-3.png);
     }
   }
 
-  @media @bw1140 {
+  @media @bw1250 {
     &__list-item--orange,
     &__list-item--black,
     &__list-item--green {
@@ -102,7 +114,7 @@
     font-family: @sans-font;
     font-size: 60px;
     font-weight: bold;
-    color: #ffffff;
+    color: @color-white;
     margin-bottom: 50px;
     position: relative;
 
@@ -113,19 +125,19 @@
       height: 30px;
       font-size: 60px;
       font-weight: bold;
-      color: #ffffff;
+      color: @color-white;
       font-family: @sans-font;
       margin-left: 10px;
     }
   }
 
-  @media @bw1560 {
+  @media @bw1850 {
     &__figures {
       margin-top: 40px;
     }
   }
 
-  @media @bw1140 {
+  @media @bw1253 {
     &__figures {
       font-size: 40px;
       margin-top: 30px;
@@ -141,10 +153,10 @@
     font-family: @sans-font;
     font-size: 24px;
     font-weight: bold;
-    color: #ffffff;
+    color: @color-white;
   }
 
-  @media @bw1140 {
+  @media @bw1253 {
     &__title {
       font-size: 24px;
     }

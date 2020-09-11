@@ -1,6 +1,7 @@
 (function () {
   'use strict';
 
+
   $(document).ready(function() {
    $("#lightSlider").lightSlider({
       item: 6,
@@ -8,7 +9,7 @@
       slideMargin: 10,
       slideMove: 1,
       loop: true,
-      controls: false,
+      controls: true,
       speed: 600,
       pager: false,
       keyPress: true,

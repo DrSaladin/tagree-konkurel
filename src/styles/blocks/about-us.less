@@ -1,23 +1,26 @@
 .about-us {
   position: relative;
 
+  
+
   &--index {
       margin-top: -230px;
       padding-top: 370px;
       padding-bottom: 200px;
     }
 
-    @media @bw1560 {
+    @media @bw1850 {
         &--index {
             margin-top: -175px;
             padding-top: 270px;
         }
     }
 
-    @media @bw1140 {
+    @media @bw1250 {
         &--index {
             margin-top: -120px;
             padding-top: 170px;
+            padding-bottom: 0;
         }
     }
 
@@ -27,11 +30,6 @@
         }
     }
 
-    @media @bw768 {
-        &--index {
-            padding-bottom: 30px;
-        }
-    }
 
     &::after {
         content: "";
@@ -41,7 +39,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        opacity: 0.1;
+        opacity: 0;
         background-image: url(../assets/images/about-us__bg.jpg);
         background-repeat: no-repeat;
         background-size: cover;
@@ -57,11 +55,12 @@
     &__wrapper {
         display: flex;
         min-height: 600px;
+        transition: 1s;
     }
 
-    @media @bw1140 {
+    @media @bw1350 {
         &__wrapper {
-            min-width: 1050px;
+            width: 1140px;
         }
     }
 
@@ -71,16 +70,36 @@
         }
     }
 
+    @media @bw700 {
+        &__wrapper {
+            width: 100%;
+        }
+    }
+
     @media @bw400 {
         &__wrapper {
             min-width: auto;
+            margin: 0 auto;
         }
     }
 
     &__title {
         font-family: @sans-font;
         font-size: 60px;
-        color: #000000;
+        color: @color-black;
+    }
+
+    @media @bw1350 {
+        &__title {
+            width: 1140px;
+            margin: 0 auto;
+        }
+    }
+
+    @media @bw700 {
+        &__title {
+            width: 100%;
+        }
     }
 
     @media @bw768 {
@@ -99,7 +118,13 @@
         background-position: center right;
     }
 
-    @media @bw400 {
+    @media @bw1850 {
+        &__logo {
+            width: 50%;
+        }
+    }
+
+    @media @bw700 {
         &__logo {
             display: none;
         }
@@ -113,16 +138,16 @@
         margin-top: 0;
     }
 
-    @media @bw768 {
+    @media @bw1850 {
         &__info-block {
-            width: 35%;
-            padding: 20px 10px 10px 30px;
+            width: 50%;
         }
     }
 
-    @media @bw400 {
+    @media @bw700 {
         &__info-block {
-            min-width: 100%;
+            width: 100%;
+            padding: 20px 30px 10px 30px;
         }
     }
 
@@ -130,7 +155,7 @@
         position: relative;
         font-family: @sans-font;
         font-size: 24px;
-        color: #000000;
+        color: @color-black;
         font-weight: bold;
         margin-bottom: 40px;
         line-height: 30px;
@@ -140,9 +165,9 @@
             content: "";
             width: 4px;
             height: 100%;
-            background: linear-gradient(to bottom, #F9B77F 30%, #FF7C0C 30%);
+            background: linear-gradient(to bottom, #F9B77F 30%, @color-orange 30%);
             top: 0;
-            left: -40px;
+            left: -30px;
         }
     }
 
@@ -170,23 +195,45 @@
     &__more-button {
         display: block;
         background: transparent;
-        border: solid 2px #FF7C0C;
+        border: solid 2px @color-orange;
         border-radius: 3px;
         width: 204px;
         height: 56px;
         font-family: @sans-font;
         font-size: 18px;
         font-weight: bold;
-        color: #000000;
+        color: @color-black;
         padding: 5px 10px;
         box-sizing: border-box;
         text-decoration: none;
         text-align: center;
         line-height: 40px;
+        overflow: hidden;
+        z-index: 2;
+        position: relative;
 
-        &:hover {
-            color: #ffffff;
-            background-color: #FF7C0C;
+        &::before {
+            content: '';
+            background-color: @color-orange;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            transition: all 300ms;
+        }
+
+        &::before {
+            top: 0;
+            left: -100%;
+        }
+
+        &:hover::before {
+            top: 0;
+            left: 0;
         }
     }
 }

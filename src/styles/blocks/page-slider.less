@@ -11,35 +11,65 @@
         justify-content: center;
     }
 
+    &__slider-container {
+        width: 1140px;
+        margin: 0 auto;
+    }
+
     &__slide-section-link {
         font-family: @sans-font;
+        text-transform: uppercase;
         font-size: 14px;
         font-weight: 200;
-        color: #ffffff;
+        color: @color-white;
         display: block;
         width: 145px;
         height: 25px;
-        background-color: #FF7C0C;
+        background-color: @color-orange;
         border-radius: 5px;
         text-decoration: none;
         text-align: center;
         padding: 3px 10px;
         box-sizing: border-box;
         margin-bottom: 40px;
+        overflow: hidden;
+        z-index: 2;
+        position: relative;
 
-        &:hover {
-            color: #000000;
+
+        &::before {
+            content: '';
+            background-color: @color-black;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            transition: all 300ms;
+        }
+
+        &::before {
+            top: 0;
+            left: -100%;
+        }
+
+        &:hover::before {
+            top: 0;
+            left: 0;
         }
     }
 
     &__slide-title {
         font-family: @sans-font;
-        color: #ffffff;
+        color: @color-white;
         font-size: 60px;
         margin: 0 0 20px 0;
     }
 
-    @media @bw768 {
+    @media @bw1120 {
         &__slide-title {
             font-size: 48px;
         }
@@ -47,14 +77,14 @@
 
     &__slide-info {
         font-family: @sans-font;
-        color: #ffffff;
+        color: @color-white;
         font-size: 24px;
         width: 390px;
         font-weight: 600;
-        margin: 0 0 65px 0;
+        margin: 0 0 55px 0;
     }
 
-    @media @bw768 {
+    @media @bw1120 {
         &__slide-info {
             font-size: 18px;
             width: 220px;
@@ -64,22 +94,44 @@
 
     &__slide-more-button {
         font-family: @sans-font;
-        color: #ffffff;
+        color: @color-white;
         font-size: 18px;
         font-weight: 600;
         display: block;
         width: 198px;
         height: 48px;
-        border: 2px solid #FF7C0C;
+        border: 2px solid @color-orange;
         background-color: transparent;
         text-align: center;
         text-decoration: none;
         box-sizing: border-box;
         padding: 10px;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
 
-        &:hover {
-            background-color: #FF7C0C;
-            color: #000000;
+        &::before {
+            content: '';
+            background-color: @color-orange;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            transition: all 300ms;
+        }
+
+        &::before {
+            top: 0;
+            left: -100%;
+        }
+
+        &:hover::before {
+            top: 0;
+            left: 0;
         }
     }
 
@@ -87,24 +139,30 @@
         position: relative;
         height: auto;
         background-color: #29363C;
-        width: 100%;
+        width: 1140px;
         background-repeat: no-repeat;
         background-size: auto;
-        padding: 200px 400px;
+        padding: 200px 390px;
         box-sizing: border-box;
         z-index: 2;
         margin: 0 auto;
     }
 
-    @media @bw1560 {
+    @media @bw1850 {
+        &__slider-list-item {
+            padding: 200px 85px;
+        }
+    }
+
+    @media @bw1120 {
         &__slider-list-item {
             padding: 200px 40px;
         }
     }
 
-    @media @bw768 {
+    @media @bw400 {
         &__slider-list-item {
-            padding: 200px 30px;
+            padding: 200px 20px;
         }
     }
 
@@ -113,15 +171,15 @@
         background-size: cover;
     }
 
-    @media @bw1560 { 
+    @media @bw1850 {
         &__slider-list-item {
-            background-image: url(../assets/images/bg-banner.png);
+            background-image: url(../assets/images/slider-tablet-back.png);
         }
     }
 
-    @media @bw1140 {
+    @media @bw1120 { 
         &__slider-list-item {
-            background-image: url(../assets/images/slider-tablet-back.png);
+            background-image: url(../assets/images/bg-banner.png);
         }
     }
 
@@ -129,19 +187,26 @@
     &__slide-arrows-block {
         display: flex;
         position: absolute;
-        right: 400px;
+        right: 20.3%;
         bottom: 205px;
     }
 
-    @media @bw1560 {
+    @media @bw1850 {
         &__slide-arrows-block {
+            right: 19%;
+        }
+    }
+
+    @media @bw1120 {
+        &__slide-arrows-block {
+            bottom: 125px;
             right: 40px;
         }
     }
 
-    @media @bw768 {
+    @media @bw400 {
         &__slide-arrows-block {
-            bottom: 125px;
+            right: 20px;
         }
     }
 
@@ -154,51 +219,15 @@
         top: 0;
         right: 0;
         bottom: 0px;
-        left: -3px;
-        width: 40px;
-        height: 40px;
+        left: -1px;
+        width: 34px;
+        height: 34px;
         margin: auto;
         border-radius: 50%;
-        transform: rotate(90deg);
+        transform: rotate(-90deg);
         fill: transparent;
-        stroke: #FF7C0C;
+        stroke: @color-orange;
         z-index: 1;
-    }
-
-    .page-slider__next-background {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: -20px;
-        width: 48px;
-        height: 48px;
-        margin: auto;
-        border-radius: 50%;
-        transform: rotate(90deg);
-        fill: transparent;
-        stroke: #8C8B8D;
-        z-index: 0;
-        bottom: 0px;
-        left: -7px;
-    }
-
-    .page-slider__prev-background {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: -20px;
-        width: 48px;
-        height: 48px;
-        margin: auto;
-        border-radius: 50%;
-        transform: rotate(90deg);
-        fill: transparent;
-        stroke: #8C8B8D;
-        z-index: 0;
-        bottom: 0px;
-        left: -52px;
     }
 }
 

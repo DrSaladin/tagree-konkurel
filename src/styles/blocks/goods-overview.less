@@ -1,15 +1,9 @@
 .goods-overview {
     position: relative;
     min-height: 162px;
+    width: 100%;
 
     &--index { 
-        border-radius: 3px;
-        background-color: rgb(255, 255, 255);
-        box-shadow: 0px 6px 30px 0px rgba(255, 124, 12, 0.22);
-        width: 1140px;
-        height: 162px;
-        box-sizing: border-box;
-        padding: 30px;
         margin: -80px auto 60px;
     }
 
@@ -31,10 +25,21 @@
         }
     }
 
+    &__wrapper {
+        overflow: scroll;
+        width: 100%;
+    }
+
     &__list {
+        border-radius: 3px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 6px 30px 0px rgba(255, 124, 12, 0.22);
+        width: 1140px;
+        height: 162px;
+        box-sizing: border-box;
+        padding: 30px;
         display: flex;
-        margin: 0;
-        padding: 0;
+        margin: 0 auto;
         list-style: none;
         justify-content: space-between;
     }

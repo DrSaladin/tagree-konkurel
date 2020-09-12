@@ -1088,8 +1088,16 @@ button {
 .goods-overview {
   position: relative;
   min-height: 162px;
+  width: 100%;
 }
 .goods-overview--index {
+  margin: -80px auto 60px;
+}
+.goods-overview__wrapper {
+  overflow: scroll;
+  width: 100%;
+}
+.goods-overview__list {
   border-radius: 3px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 6px 30px 0px rgba(255, 124, 12, 0.22);
@@ -1099,14 +1107,10 @@ button {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 30px;
-  margin: -80px auto 60px;
-}
-.goods-overview__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
   list-style: none;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -2161,6 +2165,12 @@ button {
     opacity: 1;
   }
 }
+.os-resize-observer-host,
+.os-size-auto-observer,
+.os-content-glue,
+.os-content-arrange {
+  display: none;
+}
 .clearfix::after {
   content: "";
   display: table;
@@ -2178,10 +2188,7 @@ button {
 .container--header {
   max-width: 1920px;
 }
-.container--1140container {
-  max-width: 1140px;
-}
-.container--1560container {
+.container--customed {
   max-width: 1730px;
   padding-left: 85px;
   padding-right: 85px;
@@ -2459,10 +2466,20 @@ main {
     padding-right: 85px;
     width: 100%;
   }
-  .container--1560container {
+  .container--customed {
     max-width: 1140px;
     padding-left: 0;
     padding-right: 0;
+  }
+}
+@media (max-width: 1559px) {
+  .about-us__wrapper {
+    width: 1140px;
+    margin: 0 auto;
+  }
+  .about-us__title {
+    width: 1140px;
+    margin: 0 auto;
   }
 }
 @media (max-width: 1349px) {
@@ -2502,13 +2519,6 @@ main {
   }
   .news__list-item-text-cut {
     display: initial;
-  }
-  .about-us__wrapper {
-    width: 1140px;
-  }
-  .about-us__title {
-    width: 1140px;
-    margin: 0 auto;
   }
 }
 @media (max-width: 1309px) {
@@ -2623,7 +2633,7 @@ main {
     padding-top: 170px;
     padding-bottom: 0;
   }
-  .container--1560container {
+  .container--customed {
     max-width: 690px;
   }
 }
@@ -2888,7 +2898,7 @@ main {
   .slick-dots {
     bottom: 135px;
   }
-  .container--1560container {
+  .container--customed {
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -2995,7 +3005,7 @@ main {
     padding-left: 20px;
     padding-right: 20px;
   }
-  .container--1560container {
+  .container--customed {
     padding-left: 20px;
     padding-right: 20px;
   }

@@ -224,9 +224,14 @@
     }
 
     @media @bw1120 {
-        &__search-label svg {
-            top: 12px;
-            right: 43px;
+        &__search-label {
+            min-height: 17px;
+            display: block;
+
+            & svg {
+                top: -1px;
+                right: 43px;
+            }
         }
     }
 

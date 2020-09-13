@@ -1,31 +1,29 @@
 (function () {
   'use strict';
 
-    $(document).ready(function () {
-      var sliderWidth = 1140;
-      var slickerDotsBlock = $('.slick-dots');
-      var pageSlider = $('.page-slider');
-      var pageSliderWidth = $('.page-slider').css('width');
-      var dotsLeft = slickerDotsBlock.css('left');
-      var sliderRightPadding = $('.circle--active');
-      var paddingLeft = parseInt(sliderRightPadding.css('padding-left'), 10);
-      var paddingRight = parseInt(sliderRightPadding.css('padding-right'), 10);
+  $(document).ready(function(){
+    if (window.matchMedia("(max-width: 1300px)").matches) {
+      $(".page-footer__nav h3:first").addClass("page-footer__active-nav-item");
+      $(".page-footer__nav ul:not(:first)").hide();
 
+      $(".page-footer__nav h3").click(function () {
 
-      $('window').resize(function () {
-        console.log(this.css('width'));
+        $(this).next("ul").slideToggle("slow")
+          .siblings("ul:visible").slideUp("slow");
+        $(this).toggleClass("page-footer__active-nav-item");
+        $(this).siblings("h3").removeClass("page-footer__active-nav-item");
+
+        var activeDislaimerClass = $('.page-footer__active-nav-item');
+        var disclaimerBlock = $('.page-footer__disclaimer');
+        
+        if (activeDislaimerClass.length === 1) {
+          disclaimerBlock.addClass('page-footer__disclaimer--hide');
+        } else if (activeDislaimerClass.length === 0) {
+          disclaimerBlock.removeClass('page-footer__disclaimer--hide');
+        }
       });
-
-
-      $('window').resize(function () {
-        console.log(window.css('width'));
-      });
-
-      console.log(document);
-
-      dotsLeft = (parseInt(pageSlider.css('width'), 10) - sliderWidth) / 2;
-
-    });
+    }
+ });
 
 
   $(document).ready(function() {
@@ -370,7 +368,7 @@
       className: "os-theme-dark",
       scrollbars: {
         dragScrolling: true,
-        touchSupport: true,
+          touchSupport: true,
       },
       callbacks: {
         onInitialized: function () {

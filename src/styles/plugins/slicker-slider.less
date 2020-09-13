@@ -52,7 +52,8 @@
 }
 
 #js-sliderNext { 
-    z-index: 0;
+    z-index: 3;
+    background-color: transparent;
 }
 
 #js-sliderPrev {
@@ -64,23 +65,23 @@
     content: "";
     position: absolute;
     display: block;
-    width: 10px;
-    height: 10px;
+    width: 6px;
+    height: 6px;
     border: #fff 2px solid;
-    top: 13px;
+    top: 15px;
     transform: rotate(45deg);
 }
 
 #js-sliderPrev::after {
     border-right: none;
     border-top: none;
-    left: 14px;
+    left: 17px;
 }
 
 #js-sliderNext::after {
     border-left: none;
     border-bottom: none;
-    left: 11px;
+    left: 14px;
     z-index: 2;
 }
 

@@ -1068,22 +1068,65 @@ button {
 .page-slider__next-arrow-wrapper {
   position: relative;
 }
-.page-slider .page-slider__progress-circle {
-  position: absolute;
+.page-slider__progress-circle {
   top: 0;
   right: 0;
   bottom: 0px;
-  left: -1px;
+  left: -4px;
   width: 34px;
   height: 34px;
   margin: auto;
   border-radius: 50%;
+  fill: transparent;
+  stroke: #FF7C0C;
+  z-index: 2;
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
-  fill: transparent;
-  stroke: #FF7C0C;
+  stroke: #ff7c0c;
+  position: absolute;
+}
+.page-slider__progress-circle circle {
+  stroke-dasharray: 100;
+  stroke-width: 2;
+  stroke-dashoffset: 0;
+  -webkit-transition: stroke-dasharray 5.2s;
+  -o-transition: stroke-dasharray 5.2s;
+  transition: stroke-dasharray 5.2s;
+  -webkit-animation: loader 5.2s infinite;
+          animation: loader 5.2s infinite;
+}
+.page-slider__progress-background {
+  display: block;
+  width: 38px;
+  height: 38px;
+  background-color: #8C8B8D;
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
   z-index: 1;
+}
+@-webkit-keyframes loader {
+  from {
+    stroke-dashoffset: 100;
+    stroke-dasharray: 100;
+  }
+  to {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 100;
+  }
+}
+@keyframes loader {
+  from {
+    stroke-dashoffset: 100;
+    stroke-dasharray: 100;
+  }
+  to {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 100;
+  }
 }
 .goods-overview {
   position: relative;
@@ -1615,7 +1658,8 @@ button {
   z-index: 3;
 }
 #js-sliderNext {
-  z-index: 0;
+  z-index: 3;
+  background-color: transparent;
 }
 #js-sliderPrev {
   margin-right: 25px;
@@ -1625,10 +1669,10 @@ button {
   content: "";
   position: absolute;
   display: block;
-  width: 10px;
-  height: 10px;
+  width: 6px;
+  height: 6px;
   border: #fff 2px solid;
-  top: 13px;
+  top: 15px;
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -1636,12 +1680,12 @@ button {
 #js-sliderPrev::after {
   border-right: none;
   border-top: none;
-  left: 14px;
+  left: 17px;
 }
 #js-sliderNext::after {
   border-left: none;
   border-bottom: none;
-  left: 11px;
+  left: 14px;
   z-index: 2;
 }
 /* Slider */
